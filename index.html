@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode-Books</title>
+    <style>
+        body{
+            direction: rtl;
+        }
+
+        h1{
+            background-color: black;
+            color:white;
+            width:80%;
+            margin-left:auto;
+            margin-right:auto;
+            padding:10px;
+            text-align: center;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            width:80%;
+            gap:20px;
+            flex-wrap: wrap;
+            padding:10px;
+            height:auto;
+            background-color: #ccc;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        #book-search {
+            padding: 10px;
+            margin: 5px 10px 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .search-book{
+            background-color: #ffc107;
+            width:81.4%;
+            margin-right:9.3%;
+            margin-top:-20px;
+            margin-bottom:10px;
+        }
+
+        .book-div{
+            height:auto;
+            width:150px;
+            text-align: center;
+        }
+
+        .book-name{
+            height:35px;
+            font-size: 1.1em;
+        }
+
+        p{
+            background-color: #598059;
+            color:white;
+            margin:0;
+            padding:10px;
+        }
+
+        .read-btn{
+            padding:10px;
+            width:100%;
+            border:none;
+            color:white;
+            background-color: black;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .read-btn:hover{
+            background-color: darkgreen;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .footer{
+            text-align: center;
+            margin-top:20px;
+            width:100%;
+            max-width:600px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .footer img{
+            width:100%;
+            height:auto;
+        }
+
+        @media(max-width:768px){
+            .footer{
+                max-width: 400px;
+            }
+        }
+
+        @media(max-width:480px){
+            .footer{
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>یونی کوڈ کتب</h1>
+    <div class="search-book">
+        <input type="text" id="book-search" placeholder="کتاب تلاش کریں" oninput="filterBooks()">
+    </div>
+    <div class="container">
+        <div class="book-div">
+            <p class="book-name">سیرت المہدی جلد 1</p>
+            <img src="Seerat-ul-Mahdi-1.png" width="150" height="200">
+            <a href="Seerat-ul-Mahdi-1.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">سیرت المہدی جلد 2</p>
+            <img src="Seerat-ul-Mahdi-2.png" width="150" height="200">
+            <a href="Seerat-ul-Mahdi-2.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">فصل الخطاب فی مسالۃ فاتحۃ الکتاب</p>
+            <img src="Fasl-ul-Khitab-Fatiha-til-Kitab.png" width="150" height="200">
+            <a href="Fasl-ul-Khitab-Fatiha-til-Kitab.html" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">حقائق الفرقان جلد 1</p>
+            <img src="Haqaiqul-Furqan-v1.png" width="150" height="200">
+            <a href="Haqaiqul-Furqan-v1.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">حقائق الفرقان جلد 2</p>
+            <img src="Haqaiqul-Furqan-v2.png" width="150" height="200">
+            <a href="Haqaiqul-Furqan-v2.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">حقائق الفرقان جلد 3</p>
+            <img src="Haqaiqul-Furqan-v3.png" width="150" height="200">
+            <a href="Haqaiqul-Furqan-v3.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">رد تناسخ</p>
+            <img src="Radde-Tanasukh.png" width="150" height="200">
+            <a href="Radde-Tanasukh.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">تصدیق براہین احمدیہ</p>
+            <img src="Tasdeeq Barahin e Ahmadiyya.png" width="150" height="200">
+            <a href="Tasdeeq Barahin e Ahmadiyya.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">5 کتابیں خلیفتہ المسیح الاول</p>
+            <img src="5-Books-Khalifatul-Masih-I.png" width="150" height="200">
+            <a href="5-Books-Khalifatul-Masih-I.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">خطبات نور</p>
+            <img src="Khutbaat-e-Noor.png" width="150" height="200">
+            <a href="Khutbaat-e-Noor.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">مرقات الیقین</p>
+            <img src="MirqatulYaqeen.png" width="150" height="200">
+            <a href="MirqatulYaqeen.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">نور الدین بجواب ترک اسلام</p>
+            <img src="Nurul-Deen Bajawab Tark-e-Islam.png" width="150" height="200">
+            <a href="Nurul-Deen Bajawab Tark-e-Islam.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">اسلام میں اختلافات کا آغاز</p>
+            <img src="Islam men ikhtilafaat ka aghaaz.png" width="150" height="200">
+            <a href="Islam men ikhtilafaat ka aghaaz.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">شیطان کے چیلے</p>
+            <img src="Shaitan ke Chailay.png" width="150" height="200">
+            <a href="Shaitan ke Chailay.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">کلید دعوت</p>
+            <img src="Kaleed-e-Dawat.png" width="150" height="200">
+            <a href="kaleede-dawat.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">1974 کی قومی اسمبلی کی کارروائی</p>
+            <img src="NA-Proceeding-1974.png" width="150" height="200">
+            <a href="1974 National Assembly Pakistan Proceedings .html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">ریویو براہین احمدیہ</p>
+            <img src="Review_Barahine_Ahmadiyya_By_Abu_Syed_Muhammad_Hussain_Batalvi.png" width="150" height="200">
+            <a href="review-braheene-ahmadiyya-by-muhammad-hussain-batalvi.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">مہند علی المفند</p>
+            <img src="AL_MUHANNAD_ALAL_MUFANNAD.png" width="150" height="200">
+            <a href="muhannad-alal-mufannad.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">تقویتہ الایمان</p>
+            <img src="Taqwiyat-ul Iman.png" width="150" height="200">
+            <a href="taqwiyatul-eman.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">تحذیر الناس</p>
+            <img src="tahzeerul-naas.png" width="150" height="200">
+            <a href="tehzeerul-naas.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">حسام الحرمین</p>
+            <img src="Hisamul-Harmain.png" width="150" height="200">
+            <a href="hisamul-haramain.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+        <div class="book-div">
+            <p class="book-name">کتاب التوحید</p>
+            <img src="Kitab-Al-Touheed-Saeed-Mujtaba-Saeedi.png" width="150" height="200">
+            <a href="kitabul-taoheed.html" data-fp-width="400px" data-fp-height="300px" style="max-width: 100%" target="_blank"><button class="read-btn" type="button">پڑھیں</button></a>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="https://info.flagcounter.com/zZiK"><img src="https://s01.flagcounter.com/count2/zZiK/bg_000000/txt_FFFFFF/border_CCCCCC/columns_5/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
